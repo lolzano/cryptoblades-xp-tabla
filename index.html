@@ -4,11 +4,11 @@
     </head>
     <body>
         <form id="form">
-            <label for="levels">Character Level:</label>
+            <label for="levels">Nivel de Personaje:</label>
             <input type="number" id="levels" name="levels"><br><br>
-            <label for="levelf">Level goal:</label>
+            <label for="levelf">Nivel deseado:</label>
             <input type="number" id="levelf" name="levelf"><br><br>
-            <button onclick="mostrar()">Calcuate</button>
+            <button onclick="mostrar()">Calcular</button>
           </form>
 
           <h1 id="ans"></h1>
@@ -56,7 +56,7 @@
             for(let i = levels; i < levelf; ++i) {
                 ans += v[i];
             }
-            document.getElementById("ans").innerText = ans;
+            document.getElementById("ans").innerText = "Necesitas " + ans + " XP para llegar al nivel " + levelf;
         }
     </script>
 </html>
