@@ -3,7 +3,7 @@
         <title>CryptoBlades XP Tabla</title>
     </head>
     <body>
-        <form>
+        <form id="form">
             <label for="levels">Character Level:</label>
             <input type="number" id="levels" name="levels"><br><br>
             <label for="levelf">Level goal:</label>
@@ -14,6 +14,11 @@
           <h1 id="ans"></h1>
     </body>
     <script type="text/javascript">
+
+        var form = document.getElementById("form");
+        function handleForm(event) { event.preventDefault(); } 
+        form.addEventListener('submit', handleForm);
+
         function mostrar() {
             let levels = document.getElementById("levels").value;
             let levelf = document.getElementById("levelf").value;
